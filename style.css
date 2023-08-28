@@ -1,0 +1,280 @@
+/* Basic styling */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	background-color: #f4f4f4;
+	margin: 0;
+	padding: 0;
+    position: relative;
+}
+
+.itemContainer {
+	display: inline-block;
+	padding-bottom: 20%;
+	margin-top: 30px;
+	box-shadow: 2px 2px 5px black;
+	background: linear-gradient(
+		90deg,
+		rgba(71, 71, 71, 1) 0%,
+		rgba(180, 178, 178, 0) 100%,
+		rgba(213, 213, 213, 0) 100%
+	);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+	width: 90%;
+	max-width: 600px;
+	max-height: 900px;
+    min-height: 400px;
+	margin-bottom: 50px;
+    margin-left: -300px;
+}
+
+/* Styles for small screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    body{
+        position: relative;
+    }
+	.itemContainer {
+        position: absolute;
+        margin-left: -190px;
+		padding-bottom: 50%;
+		width: 90%;
+		max-height: 100%;
+        min-height: 500px;
+       
+       margin-top: 70px;
+       margin-bottom: -89px;
+	}
+	#totalCost {
+		margin-bottom: 900px;
+		font-weight: bold;
+		color: white;
+		position: absolute;
+		top: 600px;
+		left: 5px;
+	}
+    .cart{
+       position: absolute;
+       margin-top: -240px;
+       margin-left: -150px;
+    }
+	h2 {
+       position: relative;
+		margin-top: 200px;
+        margin-bottom: -500px;
+		margin-right: 100px;
+		font-size: 21px;
+		font-weight: 700;
+		font-style: italic;
+		font-family: cursive;
+		color: rgb(233, 70, 11);
+	}
+
+	#shopping-cart {
+        position: absolute;
+		width: 80px;
+		transition: translate (-50%, -50%);
+		animation: roll 2s linear;
+        
+        margin-top: px;
+	}
+	.itemListContainer {
+		max-height: 80% ;
+		overflow-y: auto;
+        padding: 10px;
+	}
+}
+
+/* Rest of your CSS remains the same */
+
+:root {
+	--bounce-duration: 10s;
+	--bounce-delay: 2s;
+}
+
+#backgroundImage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	animation: bounce var(--bounce-duration) infinite, var(--bounce-delay) infinite;
+}
+
+@keyframes bounce {
+	0%,
+	20%,
+	50%,
+	80%,
+	100% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-20px);
+	}
+	60% {
+		transform: translateY(-10px);
+	}
+}
+
+@keyframes bounce-delay {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.item-form {
+	margin: 20px;
+}
+
+input[type="text"],
+input[type="number"] {
+	padding: 5px;
+	margin: auto;
+	display: block;
+	margin-bottom: 10px;
+	width: 90%; /* Adjust width for small screens */
+}
+
+h1 {
+	color: beige;
+	text-transform: capitalize;
+	animation: vibrate 9s infinite, vibrate-delay 10s infinite;
+}
+
+@keyframes vibrate {
+	0% {
+		transform: translateY(0);
+	}
+	25% {
+		transform: translateY(-2px);
+	}
+	50% {
+		transform: translateY(2px);
+	}
+	75% {
+		transform: translateY(-2px);
+	}
+	100% {
+		transform: translateY(2px);
+	}
+}
+
+/* Rest of your CSS remains the same */
+
+#add-item-btn {
+	padding: 10px 20px;
+	background-color: #302012;
+	color: white;
+	border: none;
+	cursor: pointer;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+	transition: transform 0.2s, box-shadow 0.2s;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+#add-item-btn:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	background-color: #57d657;
+	color: black;
+}
+
+#add-item-btn:active {
+	background-color: #816f07;
+	color: rgb(247, 244, 244);
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+li {
+	padding: 10px;
+	margin: 5px;
+}
+
+#totalCost {
+	margin-top: 20px;
+	font-weight: bold;
+	color: white;
+	position: absolute;
+	top: 580px;
+	left: 5px;
+}
+h2 {
+    position: absolute;
+	margin-top: 20px;
+	top: 480px;
+	margin-left: 440px;
+    margin-top: 82px;
+	font-size: 20px;
+	font-weight: 700;
+	font-style: italic;
+	font-family: cursive;
+	color: rgb(233, 70, 11);
+}
+
+#shopping-cart {
+	position: absolute;
+	width: 100px;
+	top: 550px;
+	left: 400px;
+	transition: translate (-50%, -50%);
+	animation: roll 2s linear;
+}
+
+@keyframes roll {
+	0% {
+		transform: translate(-50% -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+#itemList {
+	padding: 0;
+	color: white;
+	margin: 5px 0;
+	text-transform: capitalize;
+}
+.itemListContainer {
+	max-height: 250px;
+	overflow-y: auto;
+
+	padding: 10px;
+}
+
+.add-item-btn {
+	padding: 10px 20px;
+	background-color: #302012;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: transform 0.2s, box-shadow 0.2s;
+	transition: background-color 0.3s, color 0.3s;
+	margin-left: 10px;
+}
+
+.add-item-btn:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	background-color: #57d657;
+	color: black;
+}
+
+.add-item-btn:active {
+	background-color: #816f07;
+	color: rgb(247, 244, 244);
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+	</head>
+
+	<body>
+		<div class="itemContainer">
+			<img src="image/images.png" alt="" id="backgroundImage" />
+			<h1>my shopping list</h1>
+			<!-- input form to add items -->
+			<div class="item-form">
+				<input type="text" id="itemName" placeholder="item Name" /> <br />
+				<input type="number" id="itemPrice" placeholder="item Price" /> <br />
+				<button id="add-item-btn" onclick="addItem()">Add item</button>
+			</div>
+
+			<!-- List to display items -->
+			<div class="itemListContainer">
+				<ul id="itemList">
+					<!-- items will be added here dynamically using javascript -->
+				</ul>
+			</div>
+			<div class="cart">
+				<h2>Cart</h2>
+				<img id="shopping-cart" src="image/cart-icon.png" alt="" />
+				<ul id="cartList"></ul>
+			</div>
+			<!-- Total cost -->
+			<div id="totalCost">
+				Total Cost: &#8358; <span id="costValue">0.00</span>
+			</div>
+			<button class="add-item-btn" onclick="saveAsPDF()">Save as PDF</button>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
