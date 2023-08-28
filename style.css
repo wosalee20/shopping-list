@@ -237,7 +237,7 @@ h2 {
 		width: 90%;
 		max-height: 70%;
 		min-height: 500px;
-		top: 0;
+		top: 30px;
 		margin: auto;
 	}
 	#totalCost {
