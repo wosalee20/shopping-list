@@ -40,7 +40,7 @@ body {
     }
 	.itemContainer {
         position: absolute;
-        margin-left: -190px;
+        margin-left: -180px;
 		padding-bottom: 50%;
 		width: 90%;
 		max-height: 100%;
